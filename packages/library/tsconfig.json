@@ -4,9 +4,9 @@
     "outDir": "dist",
     "baseUrl": ".",
     "paths": {
-      "@repo/ui/src/*": ["src/*"]
+      "@repo/lib/src/*": ["src/*"]
     }
   },
-  "include": ["src"],
+  "include": ["src", "rollup.config.ts"],
   "exclude": ["node_modules", "dist"]
 }

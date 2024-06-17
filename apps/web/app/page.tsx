@@ -1,8 +1,10 @@
 import Image from "next/image";
-import { Card } from "@repo/ui/card";
-import { Code } from "@repo/ui/code";
+import { Card } from "@repo/ui";
+import { Code } from "@repo/ui";
 import styles from "./page.module.css";
-import { Button } from "@repo/ui/button";
+import { UiButton } from "@repo/ui";
+import NextButton from "./components/button/next-button";
+import React from "react";
 
 function Gradient({
   conic,
@@ -65,7 +67,7 @@ export default function Page(): JSX.Element {
             rel="noopener noreferrer"
             target="_blank"
           >
-            By{" "}
+            By
             <Image
               alt="Vercel Logo"
               className={styles.vercelLogo}
@@ -78,9 +80,11 @@ export default function Page(): JSX.Element {
         </div>
       </div>
 
-      <Button appName="web" className={styles.button}>
+      <UiButton appName="web" className={styles.button}>
         Click me!
-      </Button>
+      </UiButton>
+
+      <NextButton />
 
       <div className={styles.hero}>
         <div className={styles.heroContent}>
