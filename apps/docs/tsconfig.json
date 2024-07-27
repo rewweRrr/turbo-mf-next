@@ -1,6 +1,7 @@
 {
   "extends": "@repo/typescript-config/nextjs.json",
   "compilerOptions": {
+    "declaration": false,
     "plugins": [
       {
         "name": "next"
@@ -8,6 +9,7 @@
     ],
     "baseUrl": ".",
     "paths": {
+      "@store/*": [".store/*"],
       "@repo/ui/src/*": ["../../packages/ui/src/*"]
     }
   },
