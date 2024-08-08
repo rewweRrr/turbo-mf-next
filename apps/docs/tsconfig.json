@@ -9,8 +9,7 @@
     ],
     "baseUrl": ".",
     "paths": {
-      "@store/*": [".store/*"],
-      "@repo/ui/src/*": ["../../packages/ui/src/*"]
+      "@store/*": [".store/*"]
     }
   },
   "include": [

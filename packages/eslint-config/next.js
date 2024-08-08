@@ -1,34 +1,15 @@
-const { resolve } = require("node:path");
-
-const project = resolve(process.cwd(), "tsconfig.json");
+const commonConfig = require("./common");
 
 /** @type {import("eslint").Linter.Config} */
 module.exports = {
+  ...commonConfig,
   extends: [
-    "eslint:recommended",
-    "prettier",
-    require.resolve("@vercel/style-guide/eslint/next")
+    ...commonConfig.extends,
+    require.resolve("@vercel/style-guide/eslint/next"),
   ],
-  globals: {
-    React: true,
-    JSX: true,
-  },
   env: {
+    ...commonConfig.env,
     node: true,
     browser: true,
   },
-  plugins: ["only-warn"],
-  settings: {
-    "import/resolver": {
-      typescript: {
-        project,
-      },
-    },
-  },
-  ignorePatterns: [
-    // Ignore dotfiles
-    ".*.js",
-    "node_modules/",
-  ],
-  overrides: [{ files: ["*.js?(x)", "*.ts?(x)"] }],
 };
