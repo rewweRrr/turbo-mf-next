@@ -7,6 +7,7 @@ module.exports = {
   extends: [
     "eslint:recommended",
     "plugin:@typescript-eslint/recommended",
+    "plugin:react-hooks/recommended",
     "prettier",
     "turbo",
   ],
@@ -14,6 +15,7 @@ module.exports = {
     "only-warn",
     "eslint-plugin-prettier",
     "turbo",
+    "react-hooks",
     "@typescript-eslint",
   ],
   parser: "@typescript-eslint/parser",

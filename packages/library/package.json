@@ -7,12 +7,11 @@
   ],
   "main": "./dist/index.js",
   "module": "./dist/index.js",
-  "types": "./dist/index.d.ts",
+  "types": "./dist/src/index.d.ts",
   "exports": {
     ".": {
-      "import": "./dist/index.es.js",
-      "require": "./dist/index.umd.js",
-      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "types": "./dist/src/index.d.ts",
       "default": "./src/index.ts"
     }
   },
