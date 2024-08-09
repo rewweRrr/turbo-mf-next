@@ -4,7 +4,7 @@
     "outDir": "dist",
     "baseUrl": ".",
     "paths": {
-      "@repo/lib/src/*": ["src/*"]
+      "#lib/src/*": ["src/*"]
     }
   },
   "include": ["src", "rollup.config.ts"],

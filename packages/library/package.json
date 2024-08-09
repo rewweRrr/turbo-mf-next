@@ -5,25 +5,25 @@
   "files": [
     "dist"
   ],
-  "main": "./dist/index.js",
-  "module": "./dist/index.js",
-  "types": "./dist/src/index.d.ts",
   "exports": {
     ".": {
+      "development": "./src/index.ts",
       "import": "./dist/index.js",
-      "types": "./dist/src/index.d.ts",
-      "default": "./src/index.ts"
+      "types": "./dist/src/index.d.ts"
     }
+  },
+  "imports": {
+    "#lib/src/*": "./src/*"
   },
   "scripts": {
     "build": "rollup -c --configPlugin @rollup/plugin-typescript --bundleConfigAsCjs --environment INCLUDE_DEPS,BUILD:production",
-    "dev": "npm run build -- --environment BUILD:development",
     "lint": "eslint . --max-warnings 0",
     "generate:component": "turbo gen react-component"
   },
   "devDependencies": {
     "@repo/eslint-config": "*",
     "@repo/typescript-config": "*",
+    "@rollup/plugin-node-resolve": "^15.2.3",
     "@rollup/plugin-typescript": "^11.1.6",
     "@turbo/gen": "^1.12.4",
     "@types/eslint": "^8.56.5",

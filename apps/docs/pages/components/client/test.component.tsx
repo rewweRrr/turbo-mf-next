@@ -1,6 +1,7 @@
 import React, { FC, memo, useState } from "react";
 import { Switch } from "@mui/material";
 import { LibButton } from "@repo/library";
+import { UiButton } from "@repo/ui";
 
 type TestComponentProps = {};
 
@@ -16,6 +17,7 @@ const TestComponent: FC<TestComponentProps> = () => {
         }}
       />
       <LibButton />
+      <UiButton>1234</UiButton>
     </div>
   );
 };

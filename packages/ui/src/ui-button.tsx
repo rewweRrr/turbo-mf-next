@@ -20,7 +20,7 @@ export const UiButton = ({ children, className, appName }: UiButtonProps) => {
       className={className}
       onClick={() => alert(`Hello from your ${appName} app!`)}
     >
-      {isMobile ? children : <>Default</>}
+      {!isMobile ? children : <>Default</>}
     </Button>
   );
 };
